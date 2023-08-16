@@ -1,20 +1,23 @@
 package org.example.model;
 
 public abstract class Product {
-    private String id;
+    private int id;
     private double price;
+
+
     private String productName;
-    public Product (String productName, double price)
-    {
-        this.productName= productName;
-        this.price=price;
+
+    public Product(int id, double price, String productName) {
+        this.id = id;
+        this.price = price;
+        this.productName = productName;
     }
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -33,10 +36,6 @@ public abstract class Product {
     public void setProductName(String productName) {
         this.productName = productName;
     }
-
-
-
-
-
-
+    public abstract String examine();
+    public abstract String use();
 }
