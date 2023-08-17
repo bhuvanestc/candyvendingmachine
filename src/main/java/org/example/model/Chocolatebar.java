@@ -7,7 +7,7 @@ public class Chocolatebar extends Product{
     private String productName;
 
     public Chocolatebar(int id, double price,String productName,ChocolatebarType chocolatebarType) {
-        super(id, price,productName);
+        super(id, (price+chocolatebarType.getPrice()),productName);
         this.productName=productName;
         this.chocolatebarType = chocolatebarType;
     }

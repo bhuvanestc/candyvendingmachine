@@ -3,7 +3,7 @@ package org.example.model;
 public class Gummybear extends Product{
     private GummybearType gummybearType;
     public Gummybear(int id, double price, String productName, GummybearType gummybearType) {
-        super(id, price, productName);
+        super(id, (price+gummybearType.getPrice()), productName);
         this.gummybearType = gummybearType;
     }
     @Override

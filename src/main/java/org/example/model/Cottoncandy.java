@@ -3,7 +3,7 @@ package org.example.model;
 public class Cottoncandy extends Product{
     private CottoncandyType cottoncandyType;
     public Cottoncandy(int id, double price, String productName, CottoncandyType cottoncandyType) {
-        super(id, price, productName);
+        super(id, (price+cottoncandyType.getPrice()), productName);
         this.cottoncandyType = cottoncandyType;
     }
 
