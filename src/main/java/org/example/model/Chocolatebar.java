@@ -4,18 +4,22 @@ public class Chocolatebar extends Product{
 
 
     private ChocolatebarType chocolatebarType;
-    public Chocolatebar(int id, double price, String productName, ChocolatebarType chocolatebarType) {
-        super(id, price, productName);
+    private String productName;
+
+    public Chocolatebar(int id, double price,String productName,ChocolatebarType chocolatebarType) {
+        super(id, price,productName);
+        this.productName=productName;
         this.chocolatebarType = chocolatebarType;
     }
     @Override
     public String examine(){
+
         return "This is a " + chocolatebarType + " chocolate bar. Price: sek" + getPrice();
     }
     @Override
     public String use()
     {
-        return "Enjoy your " + chocolatebarType + " chocolate bar!";
+        return "Enjoy your "+productName +" "+ chocolatebarType + " chocolate bar!";
     }
 
 
